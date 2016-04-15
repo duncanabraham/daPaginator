@@ -35,8 +35,13 @@ $scope.numbersToShow = '4';
 
 HTML:
 <tr ng-repeat="row in (data | daPaginator:{name:listName, pageSize: pageSize, numbersToShow: numbersToShow}) track by $index">
-
+.
+.
+.
+<div da-page-controls name={{listName}}></div>
 ```
+Note: the name used to identify the filter must be the same as the name used on the da-page-controls directive.
+
 
 ## Options
 
