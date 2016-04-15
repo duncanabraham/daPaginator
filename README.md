@@ -89,7 +89,7 @@ sails lift
 sledgehammer to crack a nut and could have been done with much less code but I don't mind giving Sails some credit - it's awesome :)
 
 
-After lifing you can browse to your site on http://localhost:1337/
+After lifting you can browse to your site on http://localhost:1337/
 
 Within the testpag folder structure you only need to be concerned with:
 

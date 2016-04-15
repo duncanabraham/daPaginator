@@ -1,3 +1,3 @@
 # testpag
 
-a [Sails](http://sailsjs.org) application
+Just a example of how to use daPaginator ...
