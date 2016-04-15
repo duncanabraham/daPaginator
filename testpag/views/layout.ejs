@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="testPag">
+  <head>
+    <title>Paginator Test Page</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+    
+    
+  </head>
+
+  <body>
+    
+    <table width="50%" style="float:left">
+        <thead>
+            <tr>
+                <th>row #</th>
+                <th>test data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in (data.testData | daPaginator:{name:list1name, pageSize: 10}) track by $index">
+                <td>{{$index+1}}</td>
+                <td>{{row}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div da-page-controls name={{list1name}}></div>
+                </td>
+            </tr>
+        </tfoot>         
+    </table>
+    
+    <select ng-model="data.list2pagesize">
+        <option value="2">2</option>    
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    <table width="50%" style="float:left">
+        <thead>
+            <tr>
+                <th>row #</th>
+                <th>test data</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in (data.testData | daPaginator:{name:list2name, pageSize: data.list2pagesize, numbersToShow: 4}) track by $index">
+                <td>{{$index+1}}</td>
+                <td>{{row}}</td>
+            </tr>
+        </tbody>         
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div da-page-controls name={{list2name}}></div>
+                </td>
+            </tr>
+        </tfoot>            
+    </table>
+        
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/angular.js"></script>
+    <script src="/js/dependencies/daPaginator.js"></script>
+    <script src="/js/dependencies/test.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

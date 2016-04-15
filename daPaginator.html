@@ -1,0 +1,17 @@
+<ul class="pagination" ng-if="paginator.itemCount > 0">
+    <li ng-if="paginator.endStops">
+        <a ng-disabled="paginator.currentPage == 0" ng-click="setPage(0)">&laquo;</a>
+    </li>
+    <li>
+        <a ng-disabled="paginator.currentPage == 0" href="" ng-click="setPage(paginator.currentPage - 1)">&lsaquo;</a>
+    </li>
+    <li ng-repeat="pageNumber in paginator.pageNumbers track by $index" ng-class="{ active : paginator.currentPage == pageNumber, disabled : pageNumber == '...' }">
+        <a href="" ng-click="setPage(pageNumber)">{{ pageNumber + 1 }}</a>
+    </li>
+    <li>
+        <a href="" ng-click="setPage(paginator.currentPage + 1)">&rsaquo;</a>
+    </li>
+    <li ng-if="paginator.endStops">
+        <a ng-disabled="paginator.currentPage == paginator.lastPage" ng-click="setPage(paginator.lastPage)">&raquo;</a>
+    </li>
+</ul>
