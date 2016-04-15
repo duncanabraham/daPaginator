@@ -45,7 +45,7 @@ Note: the name used to identify the filter must be the same as the name used on 
 
 ## Options
 
-When intialising the list there are a number of paramters you can pass in:
+When intialising the list there are a number of parameters you can pass in:
 
 * name:             The list name. This is used to tie the controls to the list and should be unique on the page.
 * pageSize:         A number representing the number of items to display on a single page
