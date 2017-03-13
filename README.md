@@ -1,10 +1,9 @@
 # daPaginator
 
-
 ## Intro
 
 daPaginator is an AngularJS filter to allow lists of items to be paged using the built-in "ng-repeat" directive. The paginator comes
-in three parts, there's a filter for the list, a control called "daPageControls" to manage the list and an HTML template for the 
+in three parts, there's a filter for the list, a control called "daPageControls" to manage the list and an HTML template for the
 control buttons.  The buttons assume you're using bootstrap but you could provide your own CSS.
 
 ## Getting started
@@ -25,7 +24,6 @@ Now you just need to reference the filter and controls on your HTML page like th
 ```
 
 In this example the name "listname" and the pageSize could both be provided from variables rather than using static values like this:
-
 
 ```
 Controller:
@@ -90,7 +88,7 @@ npm install
 sails lift
 ```
 
-"npm install" is going to fetch all the dependencies and "sails lift" runs an instance of the Sails.js MVC API framework.  This is a 
+"npm install" is going to fetch all the dependencies and "sails lift" runs an instance of the Sails.js MVC API framework.  This is a
 sledgehammer to crack a nut and could have been done with much less code but I don't mind giving Sails some credit - it's awesome :)
 
 
@@ -106,4 +104,4 @@ Don't be concerned with the .ejs extension on the layout file, it's HTML which i
 and the file is actually just HTML. You should be aware that Sails dynamically injects CSS and JS into this template when lifted so don't
 change the `<!-- STYLES -->` or `<!-- SCRIPTS -->` sections just put files into the styles and js folders for them to be automatically linked here.
 
-The "test.js" file is my mocked up AngularJS application with some test data. 
+The "test.js" file is my mocked up AngularJS application with some test data.
