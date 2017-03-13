@@ -1,6 +1,5 @@
 # daPaginator
 
-
 ## Intro
 
 daPaginator is an AngularJS filter to allow lists of items to be paged using the built-in "ng-repeat" directive. The paginator comes
